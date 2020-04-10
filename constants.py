@@ -1,0 +1,9 @@
+BASE_DIR = "/faceEditor/"
+TEMP_DIR = "temp/"
+THUMBNAIL_SIZE = 256, 256
+
+# MODEL
+MODEL = "MODELS/generator_8.h5"
+MODEL_SIZE_SGM = 512, 512
+MODEL_SIZE_ORG = 512, 512
+SAVE_DATA = True
