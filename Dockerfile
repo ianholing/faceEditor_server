@@ -12,6 +12,7 @@ RUN apt -y install libhdf5-dev libtiff5
 
 ADD ./Requirements.txt /
 RUN python3 -m pip install -r Requirements.txt
+#RUN pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp35-cp35m-linux_armv7l.whl
 
 RUN mkdir /faceEditor
 WORKDIR /faceEditor/

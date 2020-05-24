@@ -8,9 +8,9 @@ import io
 import json
 import constants as P
 
-# KERAS
-from keras.models import load_model
-import keras.backend as K
+## KERAS
+#from keras.models import load_model
+#import keras.backend as K
 
 # initialize our Flask application and the Keras model
 app = flask.Flask(__name__)
@@ -18,18 +18,20 @@ app = flask.Flask(__name__)
 
 ##########################################
 ##############  KERAS MODEL  #############
+import tensorflow as tf
+#import tensorflow.compat.v1 as tf
+#from tensorflow.compat.v1.keras.models import load_model
+#import tensorflow.compat.v1.keras.backend as K
 
-import tensorflow.compat.v1 as tf
-from tensorflow.compat.v1.keras.models import load_model
-import tensorflow.compat.v1.keras.backend as K
+
 from io import StringIO
 import base64, uuid
 import numpy as np
 
-tf.disable_v2_behavior()
+#tf.disable_v2_behavior()
     
 print("Loading pix2pix model: " + P.BASE_DIR + P.MODEL + "..")
-model = load_model(P.BASE_DIR + P.MODEL, compile=False)
+model = tf.keras.models.load_model(P.BASE_DIR + P.MODEL, compile=False)
 print("Loading model.. DONE!")
 
 graph = tf.get_default_graph()
