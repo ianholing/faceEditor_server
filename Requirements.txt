@@ -4,5 +4,5 @@ numpy==1.18.2
 Pillow==7.0.0
 scipy==1.4.1
 Keras==2.2.4
-tensorflow==1.14.0
+tensorflow==2.5.0
 uwsgi==2.0.18
